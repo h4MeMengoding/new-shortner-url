@@ -541,7 +541,7 @@ async function redirectProtected(req, res) {
   const matches = await bcrypt.compare(req.body.password, link.password);
 
   if (!matches) {
-    throw new CustomError("Password is not correct.", 401);
+    throw new CustomError("Pwnya ga bener, cek lagi.", 401);
   }
 
   // 4. Create visit
