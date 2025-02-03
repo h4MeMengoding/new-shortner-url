@@ -1,17 +1,17 @@
-module.exports.verifyMailText = `You're attempting to change your email address on {{site_name}}.
+module.exports.verifyMailText = `Kamu meminta untuk mengganti email pada {{site_name}}.
 
-Please verify your email address using the link below.
+Buat mastiin ini kamu, klik link dibawah.
 
 https://{{domain}}/verify/{{verification}}`;
 
-module.exports.changeEmailText = `Thanks for creating an account on {{site_name}}.
+module.exports.changeEmailText = `Makasih udah buat akun di {{site_name}}.
 
-Please verify your email address using the link below.
+Biar bisa kamu pakai, verifikasi dulu emailmu dibawah.
 
 https://{{domain}}/verify-email/{{verification}}`;
 
-module.exports.resetMailText = `A password reset has been requested for your account.
+module.exports.resetMailText = `Kamu baru aja meminta reset password.
 
-Please click on the button below to reset your password. There's no need to take any action if you didn't request this.
+Silahkan klik tombol dibawah untuk mereset password, biarin aja kalo yang minta bukan kamu.
 
 https://{{domain}}/reset-password/{{resetpassword}}`;

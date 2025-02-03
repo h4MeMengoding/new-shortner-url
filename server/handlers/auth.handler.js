@@ -240,13 +240,13 @@ async function resetPassword(req, res) {
 
   if (req.isHTML) {
     res.render("partials/reset_password/request_form", {
-      message: "If the email address exists, a reset password email will be sent to it."
+      message: "Jika emailmu terdaftar link reset pw sudah dikirim ke email."
     });
     return;
   }
   
   return res.status(200).send({
-    message: "If email address exists, a reset password email has been sent."
+    message: "Jika emailmu terdaftar link reset pw sudah dikirim ke email."
   });
 }
 
