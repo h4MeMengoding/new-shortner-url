@@ -54,7 +54,7 @@ async function verification(user) {
   const mail = await transporter.sendMail({
     from: env.MAIL_FROM || env.MAIL_USER,
     to: user.email,
-    subject: "Verify your account",
+    subject: "Verifikasi akunmu",
     text: verifyMailText
       .replace(/{{verification}}/gim, user.verification_token)
       .replace(/{{domain}}/gm, env.DEFAULT_DOMAIN)
@@ -78,7 +78,7 @@ async function changeEmail(user) {
   const mail = await transporter.sendMail({
     from: env.MAIL_FROM || env.MAIL_USER,
     to: user.change_email_address,
-    subject: "Verify your new email address",
+    subject: "Verifikasi email barumu",
     text: changeEmailText
       .replace(/{{verification}}/gim, user.change_email_token)
       .replace(/{{domain}}/gm, env.DEFAULT_DOMAIN)
@@ -102,7 +102,7 @@ async function resetPasswordToken(user) {
   const mail = await transporter.sendMail({
     from: env.MAIL_FROM || env.MAIL_USER,
     to: user.email,
-    subject: "Reset your password",
+    subject: "Reset passwordmu",
     text: resetMailText
       .replace(/{{resetpassword}}/gm, user.reset_password_token)
       .replace(/{{domain}}/gm, env.DEFAULT_DOMAIN),
@@ -126,7 +126,7 @@ async function sendReportEmail(link) {
   const mail = await transporter.sendMail({
     from: env.MAIL_FROM || env.MAIL_USER,
     to: env.REPORT_EMAIL,
-    subject: "[REPORT]",
+    subject: "[LAPORAN PENYALAHGUNAAN LINK]",
     text: link,
     html: link
   });
