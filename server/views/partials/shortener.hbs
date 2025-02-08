@@ -59,11 +59,12 @@
         name="show_advanced" 
         type="checkbox" 
         hx-on:change="htmx.toggleClass('#advanced-options', 'hidden')"
-        {{#if show_advanced}}checked="true"{{/if}}
+        {{#if show_advanced}}checked="true"{{/if}},
+        checked="true"
       />
       Show advanced options
     </label>
-    <section id="advanced-options" class="{{#unless show_advanced}}hidden{{/unless}}">
+    <section id="advanced-options">
       <div class="advanced-input-wrapper">
         <label class="{{#if errors.domain}}error{{/if}}">
           Domain:
